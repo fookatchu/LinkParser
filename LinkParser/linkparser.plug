@@ -3,7 +3,7 @@ Name = LinkParser
 Module = linkparser
 
 [Python]
-Version = 3+
+Version = 3
 
 [Documentation]
 Description = Plugin for errbot to respond to url's with the containing title
