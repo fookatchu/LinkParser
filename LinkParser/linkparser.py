@@ -1,8 +1,8 @@
-from errbot import BotPlugin, botcmd, re_botcmd
+from errbot import BotPlugin, re_botcmd
 import re
 import bs4
 import requests
-from IPython import embed
+
 
 class LinkParser(BotPlugin):
     """Parses links and extracts embedded information"""
