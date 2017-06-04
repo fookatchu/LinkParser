@@ -10,7 +10,7 @@ class LinkParser(BotPlugin):
     @re_botcmd(prefixed=False, flags=re.IGNORECASE, pattern='(http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+)')
     def url_match(self, msg, match):
         # skip if in groupchat to circumvent parsing loop
-        if msg.type == 'groupchat':
+        if msg.is_group:
             if msg.frm.client == self.bot_config.CHATROOM_FN:
                 return
         url = match.groups()[0]
